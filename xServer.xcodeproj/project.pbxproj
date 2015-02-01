@@ -35,6 +35,7 @@
 		4C4873BC1A7C6884005E809C /* xServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4873C11A7C6884005E809C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C4873C21A7C6884005E809C /* xServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xServerTests.m; sourceTree = "<group>"; };
+		4C4873CC1A7C6B1A005E809C /* xServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = xServer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				4C4873AA1A7C6883005E809C /* Products */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		4C4873AA1A7C6883005E809C /* Products */ = {
 			isa = PBXGroup;
@@ -76,6 +78,7 @@
 		4C4873AB1A7C6883005E809C /* xServer */ = {
 			isa = PBXGroup;
 			children = (
+				4C4873CC1A7C6B1A005E809C /* xServer.entitlements */,
 				4C4873AE1A7C6883005E809C /* AppDelegate.h */,
 				4C4873AF1A7C6883005E809C /* AppDelegate.m */,
 				4C4873B31A7C6883005E809C /* Images.xcassets */,
@@ -160,6 +163,11 @@
 				TargetAttributes = {
 					4C4873A81A7C6883005E809C = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					4C4873BB1A7C6884005E809C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -325,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = xServer/xServer.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = xServer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -336,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = xServer/xServer.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = xServer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
